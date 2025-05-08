@@ -63,7 +63,7 @@ struct xDecalEmitter
         xVec2 isize;
         S32 prev;
     } texture;
-    static_queue<unit_data*> units;
+    static_queue<unit_data> units;
     curve_node* curve;
     U32 curve_size;
     U32 curve_index;
@@ -74,7 +74,12 @@ struct xDecalEmitter
     void set_texture(const char* name);
     void set_default_config();
     void init(S32 max_size, const char*);
+    bool need_update() const;
+
     void debug_init(const char*);
+    bool debug_need_update() const;
+    void debug_update_curve();
+    void debug_update(F32);
 };
 
 void xDecalInit();
