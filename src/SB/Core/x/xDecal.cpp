@@ -5,16 +5,6 @@
 //Doesn't OK if you use it from header, so assuming it's global.
 extern U32 active_emitters_size;
 
-bool static_queue<xDecalEmitter::unit_data>::empty() const
-{
-    return this->size() == 0;
-}
-
-U32 static_queue<xDecalEmitter::unit_data>::size() const
-{
-    return this->_size;
-}
-
 void xDecalEmitter::debug_init(const char*)
 {
 }

@@ -39,8 +39,8 @@ template <class T> struct static_queue
     U32 _max_size_mask;
     T* _buffer;
     void clear();
-    bool empty() const;
-    U32 size() const;
+    bool empty() const { return size() == 0; }
+    U32 size() const { return _size; }
 };
 
 template <class T, U32 N> struct fixed_queue
