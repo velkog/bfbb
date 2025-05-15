@@ -74,6 +74,12 @@ struct xDecalEmitter
     void set_texture(const char* name);
     void set_default_config();
     void init(S32 max_size, const char*);
+    bool need_update() const;
+
+    void debug_init(const char*);
+    bool debug_need_update() const;
+    void debug_update_curve();
+    void debug_update(F32);
 };
 
 void xDecalInit();
